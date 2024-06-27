@@ -19,6 +19,7 @@ import {
 } from "@mdxeditor/editor";
 
 import "@mdxeditor/editor/style.css";
+import "./styles.css"
 
 import { useEffect, useRef } from "react";
 
@@ -65,14 +66,12 @@ export default function WritePage() {
   // }, [mdxEditorRef, setMdxEditorRef]);
 
   return (
-      <ScrollArea className="flex h-full flex-col p-2 border-4 border-blue-500">
-        <MDXEditor
-          ref={mdxEditorRef}
-          markdown={"# Your title"}
-          className="dark-editor max-w-full h-72 border-4 border-green-500"
-          contentEditableClassName="dark:prose-invert prose max-w-full h-full font-sans border-4 border-yellow-500"
-          plugins={allPlugins("# Your title")}
-        />
-      </ScrollArea>
+      <MDXEditor
+        ref={mdxEditorRef}
+        markdown={"# Your title!"}
+        className="border-4 border-green-300 flex flex-col h-svh overflow-hidden"
+        contentEditableClassName="text-white"
+        plugins={allPlugins("# Your title")}
+      />
   );
 }

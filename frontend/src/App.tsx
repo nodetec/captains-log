@@ -10,7 +10,7 @@ import Editor from "./components/editor/Editor";
 
 export default function App() {
   return (
-    <div className="flex h-dvh w-dvw flex-col items-center justify-center border border-red-300">
+    <div className="flex h-dvh w-dvw flex-col items-center justify-center">
       <ResizablePanelGroup direction="horizontal" className="h-full w-full">
         <ResizablePanel defaultSize={15} minSize={15}>
           <Sidebar />
@@ -21,7 +21,7 @@ export default function App() {
         </ResizablePanel>
         <ResizableHandle />
         <ResizablePanel minSize={40}>
-          {/* <Editor /> */}
+          <Editor />
         </ResizablePanel>
       </ResizablePanelGroup>
     </div>
